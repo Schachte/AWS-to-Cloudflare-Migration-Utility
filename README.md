@@ -8,7 +8,7 @@ A simple web-based utility to migrate files & videos from AWS S3 to Cloudflare S
 ## Demo
 
 - [Live Demo](https://aws-to-cloudflare-migration-utility.pages.dev/)
-- [Video Demo](#)
+- [Video Demo](https://customer-9cbb9x7nxdw5hb57.cloudflarestream.com/80ab14f16cf4a954433ea2c5a6bb4a0c/watch)
 
 
 ## Features
