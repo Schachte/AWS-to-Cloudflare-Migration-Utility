@@ -18,7 +18,6 @@ export async function generatePresignedUrl(
 
   const s3 = new S3Client(s3Configuration);
   const command = new GetObjectCommand({ Bucket: object.bucketName, Key: object.name });
-  console.log(command)
 
   const url = await getSignedUrl(s3, command, { expiresIn: 15 * 60 });
   return url;

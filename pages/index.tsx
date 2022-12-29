@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <Layout pageTitle={pageTitle} subTitle={subTitle} enablePrevious={false}>
-      <div className="flex space-x-16 mt-5 w-20 justify-center">
+      <div className="flex space-x-16 mt-5 w-20 justify-center p-5 sm:p-0">
         <img src="/assets/aws.svg" />
         <img src="/assets/arrow.svg" />
         <img src="/assets/cloudflare.svg" />

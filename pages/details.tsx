@@ -92,7 +92,7 @@ export default function Details() {
       subTitle={"Setting Up The Connection Details"}
     >
       <InfoBanner bannerText="All connection information is only stored on the client. Nothing is stored on any server." />
-      <div className="flex justify-center flex-col items-center space-y-3 w-7/12">
+      <div className="flex justify-center flex-col items-center space-y-3 w-full">
         <Button
           text="Add AWS Connection Details"
           logo="/assets/aws.svg"

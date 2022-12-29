@@ -20,7 +20,7 @@ const Button: React.FC<Props> = ({ text, logo, link, enableArrowAnimation, fn}) 
         <div className="flex items-center text-sm w-full">
           <span className="group">{text}</span>
           {enableArrowAnimation && (
-            <div className="invisible pt-3 group-hover:visible">
+            <div className="invisible pt-3 group-hover:visible items-center pr-2">
               <svg
                 className="arrow"
                 width="20"

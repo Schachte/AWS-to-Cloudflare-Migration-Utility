@@ -38,10 +38,10 @@ export default function CloudflareConnection() {
         <img src="/assets/cloudflare.svg" className="w-8" />
         <span>Store Cloudflare API Credentials</span>
       </div>
-      <form onSubmit={handleSubmit} className="flex w-full justify-center">
-        <div className="w-9/12 p-5 bg-slate-50 flex self-center rounded-sm border flex-col space-y-3">
+      <form onSubmit={handleSubmit} className="flex justify-center w-full">
+        <div className="w-full p-5 bg-slate-50 flex self-center rounded-sm border flex-col space-y-3">
 
-          <div className="flex w-full items-center space-x-5">
+          <div className="flex items-center space-x-5 text-sm">
             <label
               htmlFor="account_id"
               className="whitespace-nowrap font-semibold w-1/5"
@@ -57,10 +57,10 @@ export default function CloudflareConnection() {
               className="p-3 rounded-md border w-full"
               required
             />
-            <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" />
+            {/* <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" /> */}
           </div>
 
-          <div className="flex w-full items-center space-x-5">
+          <div className="flex w-full items-center space-x-5 text-sm">
             <label
               htmlFor="bearer_token"
               className="whitespace-nowrap font-semibold w-1/5"
@@ -76,7 +76,7 @@ export default function CloudflareConnection() {
               className="p-3 rounded-md border w-full"
               required
             />
-            <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" />
+            {/* <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" /> */}
           </div>
           <button className="flex w-full h-5 border p-5 items-center justify-center bg-orange-400 rounded-md text-white border hover:cursor-pointer hover:bg-orange-500">
             Save Connection Details

@@ -4,7 +4,7 @@ type Props = {
 
 const InfoBanner: React.FC<Props> = ({ bannerText }) => {
   return (
-    <div className="w-full h-10 bg-blue-50 border border-blue-400 text-slate-700 rounded mt-5 flex items-center pl-3 space-x-2">
+    <div className="w-full h-auto bg-blue-50 border border-blue-400 text-slate-700 rounded mt-5 flex items-center pl-3 space-x-2 py-2">
       <img src="/assets/info.svg" className="w-6" />
       <span>{bannerText}</span>
     </div>

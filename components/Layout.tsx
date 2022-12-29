@@ -16,7 +16,7 @@ const Layout: React.FC<Props> = ({
   const router = useRouter();
 
   return (
-    <div className="relative flex flex-col mt-12 items-center container mx-auto w-9/12 max-w-[1000px] min-h-screen h-screen">
+    <div className="relative flex flex-col mt-12 items-center container mx-auto w-11/12 max-w-[1000px] min-h-screen h-screen">
       <div className="flex w-full justify-between">
         {enablePrevious && (
           <div
@@ -26,12 +26,12 @@ const Layout: React.FC<Props> = ({
             Back
           </div>
         )}
-        <h1 onClick={() => router.push('/')} className="w-1/3 font-bold ml-auto text-xl text-slate-700 text-center hover:cursor-pointer hover:opacity-50">
+        <h1 onClick={() => router.push('/')} className="w-1/3 font-bold ml-auto text-xl text-slate-700 text-center hover:cursor-pointer">
           {pageTitle}
         </h1>
         <div className="w-1/3"></div>
       </div>
-      <h2 className="font-normal text-md pt-2 text-slate-400">{subTitle}</h2>
+      <h2 className="font-normal text-md pt-2 text-slate-400 text-center">{subTitle}</h2>
       <hr className="w-full mt-5" />
       {children}
     </div>

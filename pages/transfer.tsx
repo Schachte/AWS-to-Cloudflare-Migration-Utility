@@ -33,6 +33,7 @@ export default function Details() {
   const awsContext = useContext(AWSContext);
   const cfContext = useContext(CloudflareContext);
 
+  const [isUploading, setIsUploading] = useState(false);
   const [fileList, setFileList] = useState<AWSObject[]>([]);
 
   const fetchS3Objects = async (
@@ -144,19 +145,37 @@ export default function Details() {
       subTitle={"Let's transfer your S3 Videos to Cloudflare Stream"}
     >
       <div className="w-full flex flex-col">
-        <button
-          onClick={startUpload}
-          className="flex w-full bg-green-100 text-green-700 items-center justify-center space-x-3 rounded py-3 mt-5 border border-green-600 hover:shadow-md duration-500 transition-all hover:bg-green-700 hover:text-white"
-        >
-          <img src="/assets/download.svg" className="w-5" />
-          <span>Begin S3 to Cloudflare Transfer</span>
-        </button>
+        {!isUploading && (
+          <button
+            onClick={() => {
+              startUpload();
+              setIsUploading(true);
+            }}
+            className="flex w-full bg-green-100 text-green-700 items-center justify-center space-x-3 rounded py-3 mt-5 border border-green-600 hover:shadow-lg duration-500 transition-all hover:bg-green-500 hover:text-white"
+          >
+            <img src="/assets/download.svg" className="w-5" />
+            <span>Begin S3 to Cloudflare Transfer</span>
+          </button>
+        )}
+
+        {isUploading && (
+          <button
+            onClick={() => {
+              startUpload();
+              setIsUploading(true);
+            }}
+            className="flex w-full bg-yellow-100 text-yellow-700 items-center justify-center space-x-3 rounded py-3 mt-5 border border-yellow-600 hover:shadow-lg duration-500 transition-all hover:bg-yellow-300 hover:text-yellow-700 hover:cursor:not-allowed"
+          >
+            <img src="/assets/download.svg" className="w-5" />
+            <span>Uploading In Progress</span>
+          </button>
+        )}
 
         <div className="flex space-x-3 mt-8 items-center ">
           <span className="text-sm text-slate-700">
             Transferring bucket contents from:{" "}
           </span>
-          <span className="inline-flex rounded-full bg-yellow-100 px-2 py-1 text-xs font-normal leading-5 text-yellow-800">
+          <span className="inline-flex rounded-lg bg-yellow-100 px-2 py-1 text-xs font-normal leading-5 text-yellow-800">
             {awsContext.awsConnection?.bucketName ||
               "bucket name not specified, please check connection details on previous page"}
           </span>

@@ -3,8 +3,8 @@ import { checkStatus } from "../cloudflare/status";
 import { CloudflareConnectionContext } from "../context/CloudflareStore";
 import { AWSObject } from "../pages/transfer";
 
-const MAX_CONCURRENT_UPLOADS = 1;
-const QUEUE_EVAL_INTERVAL_MS = 2000;
+const MAX_CONCURRENT_UPLOADS = 5;
+const QUEUE_EVAL_INTERVAL_MS = 1000;
 
 type CloudflareUpload = {
   awsMetadata: AWSObject;
@@ -88,7 +88,9 @@ const manageProcessingQueue = async (
 
       if (originalFile !== undefined && result) {
         originalFile.percentComplete = `${result.status.state} - ${
-          result.status.pctComplete && parseFloat(result.status.pctComplete).toFixed(2) || "0"
+          (result.status.pctComplete &&
+            parseFloat(result.status.pctComplete).toFixed(2)) ||
+          "0"
         }%`;
 
         updateFileState([...fileList]);

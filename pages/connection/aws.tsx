@@ -40,8 +40,8 @@ export default function AWSConnection() {
         <span>Store AWS S3 Credentials</span>
       </div>
       <form onSubmit={handleSubmit} className="flex w-full justify-center">
-        <div className="w-9/12 p-5 bg-slate-50 flex self-center rounded-sm border flex-col space-y-3 text-slate-700">
-          <div className="flex w-full items-center space-x-5">
+        <div className="w-9/12 sm:w-full p-5 bg-slate-50 flex self-center rounded-sm border flex-col space-y-3 text-slate-700">
+          <div className="flex w-full items-center space-x-5 text-sm">
             <span className="whitespace-nowrap font-semibold w-2/5">
               Bucket Region:{" "}
             </span>
@@ -52,9 +52,9 @@ export default function AWSConnection() {
               value={region}
               onChange={(e) => setRegion(e.target.value)}
             />
-            <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" />
+            {/* <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" /> */}
           </div>
-          <div className="flex w-full items-center space-x-5">
+          <div className="flex w-full items-center space-x-5 text-sm">
             <span className="whitespace-nowrap font-semibold w-2/5">
               Access Key ID:{" "}
             </span>
@@ -65,10 +65,12 @@ export default function AWSConnection() {
               value={accessKeyId}
               onChange={(e) => setAccessKeyId(e.target.value)}
             />
-            <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" />
+            {/* <div className="w-8 relative">
+                <img src="/assets/info.svg" className="hover:cursor-pointer" />
+            </div> */}
           </div>
 
-          <div className="flex w-full items-center space-x-5">
+          <div className="flex w-full items-center space-x-5 text-sm">
             <span className="whitespace-nowrap font-semibold w-2/5">
               Access Key Secret:{" "}
             </span>
@@ -79,10 +81,10 @@ export default function AWSConnection() {
               value={accessKeySecret}
               onChange={(e) => setAccessKeySecret(e.target.value)}
             />
-            <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" />
+            {/* <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" /> */}
           </div>
 
-          <div className="flex w-full items-center space-x-5">
+          <div className="flex w-full items-center space-x-5 text-sm">
             <span className="whitespace-nowrap font-semibold w-2/5">
               S3 Bucket Name:{" "}
             </span>
@@ -93,7 +95,7 @@ export default function AWSConnection() {
               value={bucketName}
               onChange={(e) => setBucketName(e.target.value)}
             />
-            <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" />
+            {/* <img src="/assets/info.svg" className="w-5 hover:cursor-pointer" /> */}
           </div>
           <button className="flex w-full h-5 border p-5 items-center justify-center bg-orange-400 rounded-md text-white border hover:cursor-pointer hover:bg-orange-500">
             Save Connection Details
