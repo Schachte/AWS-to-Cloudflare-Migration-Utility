@@ -40,6 +40,13 @@ export default function Home() {
           enableArrowAnimation={true}
         />
 
+        <Button
+          text="View Video Demo"
+          logo="/assets/video.svg"
+          link="https://customer-9cbb9x7nxdw5hb57.cloudflarestream.com/80ab14f16cf4a954433ea2c5a6bb4a0c/watch"
+          enableArrowAnimation={true}
+        />
+
       </div>
     </Layout>
   );
