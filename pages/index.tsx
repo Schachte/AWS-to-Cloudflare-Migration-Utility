@@ -32,6 +32,14 @@ export default function Home() {
             </span>
           </div>
         </div>
+
+        <Button
+          text="View Github Repo"
+          logo="/assets/git.svg"
+          link="https://github.com/Schachte/AWS-to-Cloudflare-Migration-Utility"
+          enableArrowAnimation={true}
+        />
+
       </div>
     </Layout>
   );

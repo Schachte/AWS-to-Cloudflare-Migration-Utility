@@ -7,8 +7,8 @@ A simple web-based utility to migrate files & videos from AWS S3 to Cloudflare S
 
 ## Demo
 
-- [Live Demo](https://google.com)
-- [Video Demo](https://google.com)
+- [Live Demo](https://aws-to-cloudflare-migration-utility.pages.dev/)
+- [Video Demo](#)
 
 
 ## Features
@@ -24,13 +24,13 @@ A simple web-based utility to migrate files & videos from AWS S3 to Cloudflare S
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone git@github.com:Schachte/AWS-to-Cloudflare-Migration-Utility.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd AWS-to-Cloudflare-Migration-Utility
 ```
 
 Install dependencies
@@ -48,10 +48,10 @@ Start the server
 
 ## Deployment
 
-Deployment for this project is easy and can be replicated using [Cloudflare Pages](https://cloudflare.com)
+Deployment for this project is easy and can be replicated using [Cloudflare Pages](https://pages.cloudflare.com/)
 
 ```bash
-  npm run deploy
+  npm run build && npm run start
 ```
 
 

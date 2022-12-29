@@ -146,7 +146,7 @@ export default function Details() {
       <div className="w-full flex flex-col">
         <button
           onClick={startUpload}
-          className="flex w-full bg-green-100 text-green-700 items-center justify-center space-x-3 rounded py-3 mt-5 border border-green-600 hover:shadow-md duration-500 transition-all"
+          className="flex w-full bg-green-100 text-green-700 items-center justify-center space-x-3 rounded py-3 mt-5 border border-green-600 hover:shadow-md duration-500 transition-all hover:bg-green-700 hover:text-white"
         >
           <img src="/assets/download.svg" className="w-5" />
           <span>Begin S3 to Cloudflare Transfer</span>
